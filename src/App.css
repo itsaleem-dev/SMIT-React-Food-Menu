@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f2e8;
+  color: #2b2b2b;
+  font-family: "Roboto Mono", monospace;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding-top: 52px;
+}
+
+header h1 {
+  color: #e9c43d;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+main {
+  width: 100%;
+}
+
+.menu {
+  width: 570px;
+  margin: 35px auto 0;
+}
+
+.menu h2 {
+  width: max-content;
+  margin: 0 auto;
+
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 700;
+
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+
+  padding: 8px 0 7px;
+}
+
+.intro {
+  width: 500px;
+  margin: 27px auto 27px;
+
+  text-align: center;
+
+  font-size: 10px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 55px;
+  row-gap: 30px;
+}
+
+.pizza {
+  display: flex;
+  gap: 20px;
+  min-height: 84px;
+}
+
+.pizza img {
+  width: 82px;
+  height: 82px;
+
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pizza-info {
+  padding-top: 3px;
+}
+
+.pizza-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.pizza-info p {
+  font-size: 9px;
+  line-height: 1.45;
+  font-style: italic;
+  color: #555;
+
+  max-width: 170px;
+
+  margin-bottom: 9px;
+}
+
+.price {
+  font-size: 11px;
+  color: #222;
+}
+
+.sold {
+  font-size: 10px;
+  color: #777;
+}
+
+button {
+  padding: 5px 13px;
+  border: 2px solid black;
+  border-radius: 30px;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #fde9a3;
+  color: black;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+
+.sold-out {
+  opacity: 0.45;
+}
+
+.sold-out img {
+  filter: grayscale(100%);
+}
+
+.footer-content {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-content p {
+  font-size: 9px;
+  margin-bottom: 15px;
+}
+
+.footer-content button {
+  border: none;
+  background: #e9c43d;
+
+  padding: 10px 24px;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.footer-content button:hover {
+  background: #d7b22c;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .menu {
+    width: 90%;
+    max-width: 570px;
+  }
+
+  .intro {
+    width: 90%;
+  }
+
+  .pizza-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .pizza {
+    gap: 15px;
+  }
+
+  .pizza img {
+    width: 75px;
+    height: 75px;
+  }
+}
